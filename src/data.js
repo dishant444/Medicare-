@@ -1,0 +1,170 @@
+const doctor = (id, name, specialization, image, experience, fee, available, rating, patients, qualifications, location, about) => ({
+    id,
+    name,
+    specialization,
+    image,
+    experience,
+    fee,
+    available,
+    rating,
+    patients,
+    qualifications,
+    location,
+    about,
+    languages: "English, Hindi",
+});
+export const doctors = [
+    doctor("dr-rajesh-sharma", "Dr. Rajesh Sharma", "Cardiologist", "/images/doctors/doc1.jpg", 15, 1200, true, 4.9, "5500+", "MBBS, MD (Cardiology), DM", "Lalitpur, Nepal", "Experienced cardiologist specializing in heart disease diagnosis, angioplasty, hypertension, and preventive cardiac care. Committed to helping patients build healthier hearts with evidence-based treatment and compassionate follow-up."),
+    doctor("dr-sarah-johnson", "Dr. Sarah Johnson", "General Physician", "/images/doctors/doc6.jpg", 12, 800, true, 4.8, "4200+", "MBBS, MD (Internal Medicine)", "Lalitpur, Nepal", "A dedicated general physician focused on holistic primary care, preventive health checkups, chronic disease management and patient education for families of all ages."),
+    doctor("dr-arjun-mehta", "Dr. Arjun Mehta", "Dermatologist", "/images/doctors/doc2.jpg", 10, 950, true, 4.9, "3100+", "MBBS, MD (Dermatology)", "Lalitpur, Nepal", "Specialist in medical and cosmetic dermatology, including acne, pigmentation, hair loss, allergy testing and advanced skin procedures tailored to every skin type."),
+    doctor("dr-priya-nair", "Dr. Priya Nair", "Pediatrician", "/images/doctors/doc5.jpg", 14, 900, true, 4.9, "6800+", "MBBS, DCH, DNB (Pediatrics)", "Lalitpur, Nepal", "Caring pediatrician with a gentle approach to child health, growth monitoring, vaccinations, nutrition and childhood illnesses. Loved by little patients and their parents."),
+    doctor("dr-michael-chen", "Dr. Michael Chen", "Orthopedist", "/images/doctors/doc3.jpg", 18, 1500, true, 4.8, "5200+", "MBBS, MS (Orthopedics)", "Lalitpur, Nepal", "Orthopedic surgeon expert in fracture care, joint pain, sports injuries, arthroscopy and joint replacement with a focus on restoring pain-free movement."),
+    doctor("dr-amanda-lee", "Dr. Amanda Lee", "Gynecologist", "/images/doctors/doc11.jpg", 16, 1100, true, 4.9, "4700+", "MBBS, MS (Obstetrics & Gynae)", "Lalitpur, Nepal", "Providing complete women's healthcare from antenatal care and high-risk pregnancy to preventive screenings, PCOD management and minimally invasive surgery."),
+    doctor("dr-robert-martinez", "Dr. Robert Martinez", "Neurologist", "/images/doctors/doc7.jpg", 20, 1600, false, 4.7, "3600+", "MBBS, MD, DM (Neurology)", "Lalitpur, Nepal", "Neurologist with deep expertise in headache disorders, stroke care, epilepsy, neuropathy and movement disorders. Currently on leave and available soon."),
+    doctor("dr-ananya-verma", "Dr. Ananya Verma", "General Physician", "/images/doctors/doc9.jpg", 9, 750, true, 4.8, "2900+", "MBBS, MD (Family Medicine)", "Lalitpur, Nepal", "Friendly family physician offering thorough consultations, health screening, lifestyle guidance and long-term management of diabetes and thyroid conditions."),
+    doctor("dr-daniel-okafor", "Dr. Daniel Okafor", "Cardiologist", "/images/doctors/doc4.jpg", 11, 1250, true, 4.8, "3300+", "MBBS, MD, DM (Cardiology)", "Lalitpur, Nepal", "Interventional cardiologist with a passion for preventive cardiology, echocardiography, stress testing and helping patients recover after cardiac events."),
+    doctor("dr-emily-williams", "Dr. Emily Williams", "Dermatologist", "/images/doctors/doc13.jpg", 8, 850, true, 4.9, "2100+", "MBBS, DNB (Dermatology)", "Lalitpur, Nepal", "Focused on clinical dermatology, acne treatment, allergy testing and aesthetic skin care with a personalized, science-first approach."),
+    doctor("dr-vikram-singh", "Dr. Vikram Singh", "Orthopedist", "/images/doctors/doc10.jpg", 13, 1350, false, 4.7, "4000+", "MBBS, MS (Orthopedics)", "Lalitpur, Nepal", "Specializes in sports medicine, ligament reconstruction, spine care and rehabilitation. Temporarily unavailable for new appointments."),
+    doctor("dr-sofia-rodrigues", "Dr. Sofia Rodrigues", "Pediatrician", "/images/doctors/doc14.jpg", 11, 950, true, 4.9, "3800+", "MBBS, DNB (Pediatrics)", "Lalitpur, Nepal", "Compassionate child specialist providing newborn care, developmental assessments, immunization guidance and treatment for common childhood illnesses."),
+    doctor("dr-richard-thomas", "Dr. Richard Thomas", "Neurologist", "/images/doctors/doc12.jpg", 24, 1700, true, 4.9, "7100+", "MBBS, MD, DM (Neurology)", "Lalitpur, Nepal", "Senior neurologist and stroke specialist with over two decades of clinical experience, known for clear explanations and thoughtful long-term care plans."),
+    doctor("dr-kavya-iyer", "Dr. Kavya Iyer", "Gynecologist", "/images/doctors/doc8.jpg", 10, 1050, true, 4.8, "2600+", "MBBS, MS (Obstetrics & Gynae)", "Lalitpur, Nepal", "Women's health advocate offering antenatal care, pap smears, fertility counselling and adolescent health support in a comfortable, judgement-free setting."),
+];
+export const specialties = [
+    "All Specialists",
+    "General Physician",
+    "Cardiologist",
+    "Dermatologist",
+    "Pediatrician",
+    "Orthopedist",
+    "Gynecologist",
+    "Neurologist",
+];
+export const services = [
+    {
+        id: "full-blood-count",
+        name: "Full Blood Count",
+        short: "Complete blood profile for infections & disorders",
+        about: "A complete blood count test that examines red blood cells, white blood cells, and platelets to detect infections, anaemia and other disorders.",
+        price: 499,
+        image: "/images/s2.png",
+        available: true,
+        instructions: ["No fasting required.", "Avoid alcohol for 24 hours.", "Stay hydrated before the test."],
+    },
+    {
+        id: "cholesterol-check",
+        name: "Cholesterol Check",
+        short: "Measure LDL, HDL & triglycerides",
+        about: "A cholesterol test measures LDL, HDL, and triglycerides to evaluate heart health and your risk of heart disease.",
+        price: 699,
+        image: "/images/s3.png",
+        available: true,
+        instructions: ["Avoid fried food for 24 hours.", "Fasting for 9–12 hours recommended."],
+    },
+    {
+        id: "blood-pressure-check",
+        name: "Blood Pressure Check",
+        short: "Quick hypertension screening",
+        about: "Measures systolic and diastolic blood pressure to detect hypertension and heart-related conditions early.",
+        price: 199,
+        image: "/images/s4.png",
+        available: true,
+        instructions: ["Avoid caffeine 1 hour before.", "Relax for 10 minutes before the test."],
+    },
+    {
+        id: "thyroid-test",
+        name: "Thyroid Test",
+        short: "T3, T4 & TSH hormone panel",
+        about: "Evaluates T3, T4, and TSH hormone levels to detect hypothyroidism or hyperthyroidism.",
+        price: 799,
+        image: "/images/s5.png",
+        available: true,
+        instructions: ["Avoid stress before the test.", "Inform us about current medication."],
+    },
+    {
+        id: "x-ray-scan",
+        name: "X-Ray Scan",
+        short: "Digital imaging for bones & chest",
+        about: "X-Ray imaging to detect bone fractures, lung conditions, and internal body issues.",
+        price: 899,
+        image: "/images/s6.png",
+        available: true,
+        instructions: ["Remove metallic objects.", "Inform technician if pregnant."],
+    },
+    {
+        id: "vitamin-d-test",
+        name: "Vitamin D Test",
+        short: "Check bone health & energy levels",
+        about: "Measures vitamin D levels which help diagnose bone health, energy levels, and immune strength concerns.",
+        price: 999,
+        image: "/images/s7.png",
+        available: true,
+        instructions: ["Avoid Vitamin D supplements for 24 hours.", "No fasting required."],
+    },
+    {
+        id: "eye-check-up",
+        name: "Eye Check-Up",
+        short: "Vision clarity & retina examination",
+        about: "Comprehensive eye examination including vision clarity, power measurement, and retina check.",
+        price: 599,
+        image: "/images/s8.png",
+        available: true,
+        instructions: ["Carry previous eye reports.", "Remove contact lenses."],
+    },
+];
+export const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Doctors", href: "/doctors" },
+    { label: "Services", href: "/services" },
+    { label: "Appointments", href: "/appointments" },
+    { label: "Contact", href: "/contact" },
+];
+export const departments = [
+    "General Physician",
+    "Cardiology",
+    "Orthopedics",
+    "Dermatology",
+    "Pediatrics",
+    "Gynecology",
+];
+export const clinicServices = [
+    "General Consultation",
+    "Adult Checkup",
+    "Health Screening",
+    "Stress Test",
+    "Heart Consultation",
+    "Fracture Care",
+    "Joint Pain Consultation",
+    "Skin Consultation",
+    "Allergy Test",
+    "Acne Treatment",
+    "Child Checkup",
+    "Growth Monitoring",
+    "Antenatal Care",
+    "Pap Smear",
+    "Blood Test",
+];
+export const nextDates = () => {
+    const out = [];
+    const now = new Date();
+    for (let i = 0; i < 7; i++) {
+        const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i);
+        out.push({
+            key: d.toISOString().slice(0, 10),
+            day: d.toLocaleDateString("en-US", { weekday: "short" }),
+            date: d.getDate(),
+            month: d.toLocaleDateString("en-US", { month: "short" }),
+            full: d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" }),
+        });
+    }
+    return out;
+};
+export const timeSlots = [
+    "09:00 AM",
+    "10:00 AM",
+    "11:30 AM",
+    "12:00 PM",
+    "02:00 PM",
+    "03:30 PM",
+    "04:00 PM",
+    "05:30 PM",
+];
